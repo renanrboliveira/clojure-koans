@@ -21,25 +21,25 @@
   (= '() (rest '(100)))
 
   "Construction by adding an element to the front is easy"
-  (= __ (cons :a '(:b :c :d :e)))
+  (= '(:a :b :c :d :e) (cons :a '(:b :c :d :e)))
 
   "Conjoining an element to a list isn't hard either"
-  (= __ (conj '(:a :b :c :d) :e))
+  (= '(:e :a :b :c :d) (conj '(:a :b :c :d) :e))
 
   "You can use a list like a stack to get the first element"
-  (= __ (peek '(:a :b :c :d :e)))
+  (= :a (peek '(:a :b :c :d :e)))
 
   "Or the others"
-  (= __ (pop '(:a :b :c :d :e)))
+  (= '(:b :c :d :e) (pop '(:a :b :c :d :e)))
 
   "But watch out if you try to pop nothing"
-  (= __ (try
+  (= "No dice!" (try
           (pop '())
           (catch IllegalStateException e
             "No dice!")))
 
   "The rest of nothing isn't so strict"
-  (= __ (try
+  (= '() (try
           (rest '())
           (catch IllegalStateException e
             "No dice!"))))
