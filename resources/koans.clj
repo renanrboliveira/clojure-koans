@@ -259,11 +259,30 @@
                    "Giants"]}]
 
  ["24_macros" {"__" [~(first form)
-                  ~(nth form 2)
-                  form
-                  (drop 2 form)
-                  "Hello, Macros!"
-                  10
-                  '(+ 9 1)]}]
+                     ~(nth form 2)
+                     form
+                     (drop 2 form)
+                     "Hello, Macros!"
+                     10
+                     '(+ 9 1)]}]
 
+ ["25_threading_macros" {"__" [{:a 1}
+                               "Hello world, and moon, and stars"
+                               "String with a trailing space"
+                               6
+                               1
+                               [2 3 4]
+                               12
+                               [1 2 3]]}]
+
+ ["26_transducers" {"__" ['(2 3 4)
+                          [2 4]
+                          [2 4]
+                          [2 4]
+                          6]}]
+
+ ["27_multimethods" {"__" ["Hello, World!"
+                           "Hello there"
+                           1
+                           6]}]
 ]
